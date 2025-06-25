@@ -1,1 +1,36 @@
+/* Button style start */
+body {
+  background-color: red;
+}
+button {
+            border:0;
+            filter:drop-shadow(4px 5px #000);
+            border-radius: 10px;
+            padding:7px;
+            min-width: 70%;
+            margin: 2%;
+            font-family: courier;
+            text-align:center;
+            cursor:grab
+            text-transform:lowercase;
+            font-size: 50px;
+            font-weight:0;
+    }
+button:hover {
+	background-color:darkred;
+	}
+	.redButton{
+		background-color:red;
+	}
+h1 {
+	color:#666;
+	text-decoration: underline dashed;
+	}
 
+div {
+	font-family:courier;
+	width:70%;
+	background-color:lightblue;
+	margin: 0 auto;
+	padding: 20px;
+	}
