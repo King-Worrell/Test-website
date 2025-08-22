@@ -1,17 +1,42 @@
-.row > .column {
-  padding: 0 8px;
+
+.lightboxGallery {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-content: stretch;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.lightboxGallery > div {
+  margin: 5px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+ flex-grow: 1;
 }
 
-/* Create four equal columns that floats next to eachother */
-.column {
-  float: left;
-  width: 25%;
+.lightboxGallery img {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: min(60vw, 19rem); /*Choses the smaller of the two values*/
+  object-fit: cover;
+  object-position: center center;
+  object-position: center center;
+  }
+/* Responsive layout - makes a two column-layout instead of four columns 
+@media screen and (max-width: 800px) {
+  .row {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
+@media screen and (max-width: 600px) {
+  .row {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 /* The Modal (background) */
@@ -55,11 +80,11 @@
   cursor: pointer;
 }
 
-/* Hide the slides by default */
+/* Hide the slides by default 
 .mySlides {
   display: none;
 }
-
+*/
 /* Next & previous buttons */
 .prev,
 .next {
