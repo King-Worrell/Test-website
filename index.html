@@ -2,71 +2,104 @@
 	<html>
 	<title>Simple Website Template</title> 
 <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name"> <!-- EDIT ME! change "Your Name" to your name/username/author name for SEO purposes-->
+  <meta name="description" content="Describe your website here for SEO purposes!"> <!-- EDIT ME! only write within the quotations where it says "Describe...purposes!"-->
+
 	<!-- Attatch a CSS file to HTML -->
 	<link rel="stylesheet" href="web.css">
+	<script src="script.js"></script> 
+	<link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
-<body>
-	<!-- Display Text -->
-	<div>
-	<!-- Sidebar -->
-		<div id="nav">
-			<!-- Logo -->
-			<div>
-			<h1>KingW</h1>
-			<p>kingw.contact@gmail.com</p>
-			</div>
-			<!-- List -->
-			<nav>
-				<!-- Social media links -->
-				<h1 class="sidebarList">Visual art</h1>
-				<ul class="sidebarList">
-					<li>Personal work</li>
-					<li>Client work</li>
-					<li>3d</li>
-					<li>Pixel</li>
-				</ul>
-				<!-- Other links -->
-				<h1 class="sidebarList">Other</h1>
-				<ul class="sidebarList">
-					<li>About</li>
-					<li>Games</li>
-				</ul>
-			</nav>	
-		</div>
-		<!-- Image Box -->
-		<div>
-			<!-- Image Box -->
-			<div class= "masonry galleryill">
-				<!-- Assets -->
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">	<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">	<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">	<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/MikuSpin.gif"onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
-				<img src="img/VikingCatgirlIdols4.jpg" onclick="onClick(this);currentSlide(1)">
+<div id="wrapper">
+		<div id="main">
+			<div id="inner">
+				<header>
+						<div id="Name">
+							<a>
+								<h1>
+									King Worrell
+								</h1>
+								<br>
+							</a>
+						</div>
+						</div id="navbar">
+							<a href=”a”>Portfolio</a>
+							<a href=”b”>About</a>
+							<a href=”c”>Commissions</a>
+							<a href=”d”>Other projects</a>
+						</div>
+				</header>
+			<body>
+				<!-- images used in lightbox-->
+				<div class="row">
+				  <div class="column">
+					    <img src="img/favicon.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="collumn">
+						<img src="img/favicon.png" onclick="openModal();currentSlide(2)" class="hover=shadow">
+					</div>
+					<div class="collumn">
+						<img src="img/favicon.png" onclick="openModal();currentSlide(3)" class="hover=shadow">
+					</div>
+				</div>
+
+				<!-- The modal/lightbox-->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<img src="img/VikingCatgirlIdols4.jpg" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="img/MikuSpin.gif" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="img/VikingCatgirlIdols4.jpg" style="width:100%">
+							</div>
+						</div>
+			
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</body>
+				<footer>
+					<section id="about">
+						<h1>About Me</h1> <!-- EDIT ME! -->
+						<!-- Whatever you want to write about yourself, put below!-->
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae enim ornare, venenatis sapien vitae, varius nibh. Donec nec magna eu metus ultrices tempor. Proin sed leo nibh. Ut sit amet blandit arcu, a consectetur magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ut imperdiet nulla. Maecenas finibus purus et pretium ultricies. Nullam ut lorem a metus volutpat tempor non at velit. Aliquam id odio nec nisl imperdiet ultricies id at nulla. Maecenas iaculis nisi et risus lacinia, aliquam feugiat turpis cursus. Sed turpis mauris, dictum vel metus quis, accumsan malesuada risus. Vivamus eu diam id lacus pharetra aliquam at sit amet orci. Etiam magna justo, condimentum auctor porttitor vitae, venenatis vitae mauris. Praesent auctor eros dictum nunc pulvinar, eget porttitor neque dignissim. Quisque vulputate sagittis elit mattis luctus.</p> <!-- EDIT ME! If you want more paragraphs, wrap the sentences within <p></p> e.g. <p>Hello! I am a new paragraph!</p> -->
+					</section>
+					<section id="links">
+						<h2>Links and Social Media</h2>
+						<!-- EDIT ME! On the "" after each href= you should replace the # with the URL to your appropriate social media page. If you don't have one or don't want it, delete the entire line from opening <a> to closing </a> -->
+						<a href="#"><i class="fa-brands fa-twitter"></i></a> <!-- EDIT ME! -->
+						<a href="#"><i class="fa-brands fa-instagram"></i></a> <!-- EDIT ME! -->
+						<a href="#"><i class="fa-brands fa-tumblr"></i></a> <!-- EDIT ME! -->
+						<a href="#"><i class="fa-brands fa-facebook"></i></a> <!-- EDIT ME! -->
+						<a href="#"><i class="fa-brands fa-tiktok"></i></a> <!-- EDIT ME! -->
+						<a href="#"><i class="fa-brands fa-twitch"></i></a> <!-- EDIT ME! -->
+					
+						<!-- any other social media links you want an icon for, go to https://fontawesome.com/search?o=a&f=brands and click on the icon, then copy the i class code they give -- the set up files already have the brand fontawesome icons in the asset folder. You'll type <a href="your url here"> and then COPY the i class code from the website followed by </a>
+						
+						You can also include any of the free solid icons: https://fontawesome.com/search?o=r&m=free just do same as above
+						-->
+
+					<!-- OTHER EXTERNAL LINKS -->
+						<!-- If you want to add any external links, you put the URL (http://blahblahblah...) in the "" following href= and where it says External Link 1 between the a tags, you put whatever text you want to show up -- e.g. <a href="https://www.google.com">Google Search</a> will show up as Google Search on your webpage. Put as many as you like.-->
+						<h3>Other Websites</h3> <!-- EDIT ME! Call this section whatever you want OR get rid of it by deleting this whole line. -->
+						<ul>
+							<li><a href="#">External Link 1</a></li> <!-- EDIT ME! -->
+							<li><a href="#">External Link 2</a></li> <!-- EDIT ME! -->
+							<!--if you want more pages to your website you could also make them here or make another section or something. This site it bare bones and geared more towards Basic Artist Gallery Functionality. If you do not want this part, delete from <ul> to </ul> -->
+						</ul>
+				<!-- Don't Type or Delete Beyond This Point!-->
+					</section>
+				</footer>
 			</div>
 		</div>
 	</div>
-</body>
-<footer>
-</footer>
 </html>
