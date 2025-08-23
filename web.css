@@ -1,8 +1,36 @@
+
+@font-face {
+  font-family: inter;
+  src: url(assets/Inter-VariableFont_opsz,wght.ttf);
+}
+body {
+  font-family: inter ,Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 100;
+   background-color: rgb(43, 43, 43);
+
+}
+
+.header{
+  display: flex;
+  flex-direction: row wrap;
+  width: 100%;
+  align-content: stretch;
+}
+#name {
+  font-weight: bold;
+}
+#navbar{
+  margin: 10px;
+  background-color: red;
+  }
+
+/*Gallery scaling*/
 .lightboxGallery {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    align-content: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-content: stretch;
 }
 
 .lightboxGallery > div {
@@ -22,14 +50,6 @@
   object-position: center center;
   object-position: center center;
   }
-
-header{
-    background-color: red;
-        display: block;
-}
-#navbar{
-    float: right;
-}
 
 /* The Modal (background) */
 .modal {
